@@ -84,9 +84,10 @@ hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=NO
 
 hi WildMenu         guifg=white       guibg=DarkRed     gui=NONE      ctermfg=white       ctermbg=DarkRed      cterm=NONE
 hi PmenuSbar        guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=NONE
-"hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+" hi Ignore           guifg=gray        guibg=black       gui=NONE      ctermfg=gray       ctermbg=black        cterm=NONE
 
-hi Error            guifg=NONE        guibg=red         gui=undercurl ctermfg=white       ctermbg=red         cterm=NONE     guisp=#FF6C60 " undercurl color
+" guisp: undercurl color
+hi Error            guifg=NONE        guibg=red         gui=undercurl ctermfg=white       ctermbg=red         cterm=NONE     guisp=#FF6C60 
 hi ErrorMsg         guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=red         cterm=NONE
 hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=white       ctermbg=red         cterm=NONE
 

@@ -1,9 +1,10 @@
 """""""""""""""""""""""""""""
 " Personilized vim settings
 """""""""""""""""""""""""""""
-
 " Display line numbers on the left
 set number
+" Remove left margin
+set foldcolumn=0
 
 " Enable system clipboard
 set clipboard=unnamed
@@ -11,20 +12,31 @@ set clipboard=unnamed
 " Auto-enable indent guides
 let g:indent_guides_enable_on_vim_startup = 1
 
-set background=dark
 colorscheme ir_black
+
+""""""""""""""""""""""""
+" colorscheme overrides
+""""""""""""""""""""""""
+hi Search ctermfg=green ctermbg=blue
+hi Comment ctermfg=gray
+hi LineNr ctermfg=gray
+hi Ignore ctermfg=gray ctermbg=black cterm=NONE
 
 """""""""
 " vim-go
 """""""""
-
 " Height of quickfix window; default is variable based on output
 " let g:go_list_height = 10
+"
+"let g:gofmt_command = "goimports"
+
+map <leader>gb :GoBuild<cr>
+map <leader>gt :GoTest<cr>
+map <leader>gtc :GoTestCompile<cr>
 
 """""""""""
 " NERDTree
 """""""""""
-
 " Show hidden files automatically
 let NERDTreeShowHidden=1
 
@@ -41,7 +53,6 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 """"""""""""""""""""""""""""""""
 " vim-nerdtree-syntax-highlight
 """"""""""""""""""""""""""""""""
-
 " Highlight full name (not only icons)
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
