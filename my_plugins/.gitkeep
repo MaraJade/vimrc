@@ -1,3 +1,4 @@
-vim-go
-nerdtree-git-plugin
-vim-nerdtree-syntax-highlight
+vim-go: https://github.com/fatih/vim-go
+nerdtree-git-plugin: https://github.com/Xuyuanp/nerdtree-git-plugin
+vim-nerdtree-syntax-highlight: https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+indentpython: git@github.com:vim-scripts/indentpython.vim.git

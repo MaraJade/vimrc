@@ -60,3 +60,18 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+
+""""""""""""""""""""""""""
+" Python specific settings
+""""""""""""""""""""""""""
+au BufNewFile,BufRead *.py
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" Flag extra whitespace
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
