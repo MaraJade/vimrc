@@ -1,18 +1,16 @@
 """""""""""""""""""""""""""""
 " Personilized vim settings
 """""""""""""""""""""""""""""
+colorscheme ir_black
+
 " Display line numbers on the left
 set number
 " Remove left margin
 set foldcolumn=0
-
+" Set marker at line limit
+set colorcolumn=79
 " Enable system clipboard
 set clipboard=unnamed
-
-" Auto-enable indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-
-colorscheme ir_black
 
 """"""""""""""""""""""""
 " colorscheme overrides
@@ -22,17 +20,19 @@ hi Comment ctermfg=gray
 hi LineNr ctermfg=gray
 hi Ignore ctermfg=gray ctermbg=black cterm=NONE
 
-"""""""""
-" vim-go
-"""""""""
-" Height of quickfix window; default is variable based on output
-" let g:go_list_height = 10
-"
-"let g:gofmt_command = "goimports"
+" 237-242: very dark gray
+hi IndentGuidesOdd ctermbg=237
+hi IndentGuidesEven ctermbg=240
 
-map <leader>gb :GoBuild<cr>
-map <leader>gt :GoTest<cr>
-map <leader>gtc :GoTestCompile<cr>
+""""""""""""""""
+" Indent Guides
+""""""""""""""""
+" Auto-enable
+let g:indent_guides_enable_on_vim_startup = 1
+" Don't automatically select colors
+let g:indent_guides_auto_colors = 0
+
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 """""""""""
 " NERDTree
@@ -61,9 +61,22 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
 let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 
-""""""""""""""""""""""""""
-" Python specific settings
-""""""""""""""""""""""""""
+
+""""""""""""""""""""
+" Filetype Settings
+""""""""""""""""""""
+
+"""""
+" Go
+"""""
+au FileType go map <leader>gb :GoBuild<cr>
+au FileType go map <leader>gt :GoTest<cr>
+au FileType go map <leader>gc :GoTestCompile<cr>
+
+
+"""""""""
+" Python 
+"""""""""
 au BufNewFile,BufRead *.py
     \ set tabstop=2
     \ set softtabstop=2
